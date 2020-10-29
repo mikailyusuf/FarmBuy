@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+       android:id="@+id/farmersProductsFragment"
+        android:title="My Products"
+        android:icon="@drawable/products"
+        />
+
+    <item
+       android:id="@+id/farmerOrdersFragment"
+        android:title="My Orders"
+        android:icon="@drawable/order"
+        />
+
+    <item
+        android:id="@+id/farmerProfileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+
+        />
+
+</menu>

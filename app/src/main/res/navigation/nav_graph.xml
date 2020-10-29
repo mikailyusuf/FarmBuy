@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productsFragment">
+
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.farmbuy.buyer.ui.fragment.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_orderActivity"
+            app:destination="@id/orderActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyersOrdersFragment"
+        android:name="com.farmbuy.buyer.ui.fragment.BuyersOrdersFragment"
+        android:label="fragment_buyers_orders"
+        tools:layout="@layout/fragment_buyers_orders" >
+        <action
+            android:id="@+id/action_buyersOrdersFragment_to_orderActivity"
+            app:destination="@id/orderActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/orderActivity"
+        android:name="com.farmbuy.buyer.ui.OrderActivity"
+        android:label="activity_order"
+        tools:layout="@layout/activity_order" >
+        <argument
+            android:name="product"
+            app:argType="com.farmbuy.datamodel.Products" />
+    </activity>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.farmbuy.buyer.ui.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_orderActivity"
+            app:destination="@id/orderActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyersMessageFragment"
+        android:name="com.farmbuy.buyer.ui.fragment.BuyersMessageFragment"
+        android:label="fragment_buyers_message"
+        tools:layout="@layout/fragment_buyers_message" />
+    <fragment
+        android:id="@+id/buyerProfile"
+        android:name="com.farmbuy.buyer.ui.fragment.BuyerProfile"
+        android:label="fragment_buyer_profile"
+        tools:layout="@layout/fragment_buyer_profile" />
+</navigation>

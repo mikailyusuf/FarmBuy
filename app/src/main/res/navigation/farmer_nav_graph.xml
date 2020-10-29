@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/farmer_nav_graph"
+    app:startDestination="@id/farmersProductsFragment"
+ >
+
+    <activity
+        android:id="@+id/createOrderActivity"
+        android:name="com.farmbuy.farmer.CreateOrderActivity"
+        android:label="activity_create_order"
+        tools:layout="@layout/activity_create_order" />
+    <fragment
+        tools:layout="@layout/fragment_farmers_products"
+        android:id="@+id/farmersProductsFragment"
+        android:name="com.farmbuy.farmer.fragments.FarmersProductsFragment"
+        android:label="FarmersProductsFragment" >
+        <action
+            android:id="@+id/action_farmersProductsFragment_to_editFarmerOrderActivity"
+            app:destination="@id/editFarmerOrderActivity" />
+        <action
+            android:id="@+id/action_farmersProductsFragment_to_createOrderActivity"
+            app:destination="@id/createOrderActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmerOrdersFragment"
+        android:name="com.farmbuy.farmer.fragments.FarmerOrdersFragment"
+        android:label="fragment_farmer_orders"
+        tools:layout="@layout/fragment_farmer_orders" >
+        <action
+            android:id="@+id/action_farmerOrdersFragment_to_approveOrderFragment"
+            app:destination="@id/approveOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmerMessageFragment"
+        android:name="com.farmbuy.farmer.fragments.FarmerMessageFragment"
+        android:label="fragment_farmer_message"
+        tools:layout="@layout/fragment_farmer_message" />
+    <fragment
+        android:id="@+id/farmerProfileFragment"
+        android:name="com.farmbuy.farmer.fragments.FarmerProfileFragment"
+        android:label="fragment_farmer_profile"
+        tools:layout="@layout/fragment_farmer_profile" />
+    <activity
+        android:id="@+id/editFarmerOrderActivity"
+        android:name="com.farmbuy.farmer.UpdateOrderActivity"
+        android:label="activity_edit_farmer_order"
+        tools:layout="@layout/activity_edit_farmer_order" >
+        <argument
+            android:name="product"
+            app:argType="com.farmbuy.datamodel.Products" />
+    </activity>
+    <fragment
+        android:id="@+id/approveOrderFragment"
+        android:name="com.farmbuy.farmer.fragments.ApproveOrderFragment"
+        android:label="fragment_approve_order"
+        tools:layout="@layout/fragment_approve_order" >
+        <argument
+            android:name="product"
+            app:argType="com.farmbuy.datamodel.Products" />
+    </fragment>
+</navigation>

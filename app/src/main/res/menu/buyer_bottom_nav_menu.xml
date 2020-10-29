@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/productsFragment"
+        android:enabled="true"
+        android:icon="@drawable/products"
+        android:title="Produts" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:enabled="true"
+        android:icon="@drawable/search"
+        android:title="Search" />
+    <item
+        android:id="@+id/buyersOrdersFragment"
+        android:enabled="true"
+        android:icon="@drawable/order"
+        android:title="My Orders" />
+
+    <item
+        android:id="@+id/buyerProfile"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+
+        />
+
+</menu>

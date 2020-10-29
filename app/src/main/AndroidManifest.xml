@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.farmbuy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.Onboarder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".auth.ForgotPasswordActivity" />
+        <activity android:name=".farmer.UpdateOrderActivity" />
+        <activity android:name=".farmer.FarmersActivity" />
+        <activity android:name=".buyer.ui.OrderActivity" />
+        <activity android:name=".farmer.CreateOrderActivity" />
+        <activity android:name=".buyer.ui.BuyersActivity" />
+        <activity android:name=".auth.AuthActivity" />
+        <activity android:name=".auth.SignUpActivity" />
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".ui.OnboardingActivity">
+
+        </activity>
+    </application>
+
+</manifest>
