@@ -58,7 +58,7 @@ A few of the things you can do with FarmBuy as  Buyer:
 ## Features
 
 A few of the things you can do with FarmBuy:
-* Farmers sell their Producel faster
+* Farmers sell their Produce faster
 * Buyers get fresh produce and buy directly from farmers
 
 
